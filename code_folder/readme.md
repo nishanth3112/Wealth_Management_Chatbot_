@@ -1,230 +1,106 @@
-### **Wealth Asset Management Project**
+# 💼 Autonomous Agentic Wealth Management Chatbot
+
+An **intelligent Wealth & Risk Assessment System** integrating **Agentic AI**, **LangChain**, and **Microsoft Fabric Lakehouse** to autonomously analyze financial data, generate investment strategies, and provide personalized risk mitigation recommendations.  
+
+This project demonstrates an **end-to-end AI-powered financial platform** capable of dynamic decision-making using modular LangChain tools, Retrieval-Augmented Generation (RAG) models, and contextual memory for long-term portfolio intelligence.
 
 ---
 
-#### **Overview**
-This project is designed to support a Wealth Asset Management platform by providing a structured data solution to manage clients' portfolios, assets, transactions, and perform risk assessments. The project also showcases a **Text-to-SQL model** for querying the database and uses **LangChain** to assist in generating dynamic queries. The data is stored in **Microsoft Fabric Lakehouse**, ensuring scalability and performance for large data sets, making this solution suitable for financial institutions, wealth management firms, and analysts.
+## 🎯 Objective
 
-The entire workflow involves setting up a Microsoft Fabric Lakehouse, inserting 1GB of dummy data into the tables, and demonstrating how a Text-to-SQL model can be used to query this data.
-
----
-
-### **Microsoft Fabric Lakehouse**
-
-**Microsoft Fabric Lakehouse** is a central part of this project as it provides the cloud-based storage layer for all the data related to clients, portfolios, assets, transactions, and risk assessments. The Lakehouse enables efficient querying and reporting, which is critical for the performance of real-time dashboards and analysis.
-
-After setting up the database schema (which includes tables, views, and stored procedures), the next step is to populate the database with the dummy data required for generating insights. The data inserted into this Lakehouse forms the basis for the wealth management operations, including risk assessments, asset allocations, and transaction tracking.
+To design an **Agentic AI-driven Wealth Management platform** that autonomously:
+- Analyzes portfolio and transaction data  
+- Evaluates risk exposure and diversification  
+- Suggests tailored mitigation or reallocation strategies  
+- Uses **LangChain reasoning and Microsoft Fabric Lakehouse** for large-scale, contextual, and real-time analysis  
 
 ---
 
-### **Data Insertion**
+## 🏗️ Architecture
 
-Before running any analysis, we need to insert data into the Microsoft Fabric Lakehouse. The project includes a Python script designed to insert 1GB of dummy data into the database. This will simulate real-world scenarios by populating the tables with enough data for meaningful visualization and analytical insights.
+> *(🔧 Drag and drop your architecture diagram here)*  
 
-#### **File to Insert Data:**
-- `data_insertion.py` - This Python file contains the logic to connect to the Microsoft Fabric Lakehouse and insert dummy data into the database.
-
-#### **Command to Run Data Insertion:**
-```bash
-python CreateDataWarehouse/insertToSQL.py
-```
-
-Ensure that you have the required packages installed (`pyodbc`, `faker`, etc.) and have updated the connection string in the script to connect to your Microsoft Fabric Lakehouse.
+This section will illustrate:
+- Data ingestion into Microsoft Fabric Lakehouse  
+- RAG + LangChain pipeline for Text-to-SQL and financial reasoning  
+- Flask API + HTML UI chatbot  
+- Vector DB (ChromaDB) for conversation memory  
+- Agentic workflow orchestration (Intent Detection → Tool Selection → Execution → Response)  
 
 ---
 
-### **Text-to-SQL Model**
+## 🧠 Overview
 
-The **Text-to-SQL model** is a crucial part of this project. This AI-driven model is trained to convert natural language questions into SQL queries, making it easier for users who are not familiar with SQL to interact with the wealth management data.
+This project forms **Phase 2** of the *Microsoft Fabric Financial Reporting Agent* initiative — extending from static reporting to intelligent financial reasoning using **Agentic AI**.
 
-This model is pre-trained and fine-tuned to understand industry-specific queries. You can use it to:
-- Query portfolio values,
-- Analyze asset distributions,
-- Retrieve transaction histories,
-- Assess risks, and more.
-
-The Text-to-SQL model dynamically generates SQL queries based on the user’s input and runs those queries against the data stored in the Microsoft Fabric Lakehouse.
-
-#### **File to Run Text-to-SQL Model:**
-- Train Text-to-SQL Model: `RAGToSQL/TrainRAG.py`
-- Inference Text-to-SQL Model: `RAGToSQL/InferenceRAG.py`
-- Fabrics Text-to-SQL Model: `RAGToSQL/InferenceRAG.py`
-
+Agentic AI enables the system to:
+- Break complex financial questions into modular sub-tasks  
+- Dynamically invoke specialized LangChain tools (e.g., risk analysis, strategy generation)  
+- Retain financial context across conversations using **ChromaDB**  
+- Provide **autonomous**, **personalized**, and **goal-oriented** financial recommendations  
 
 ---
 
-### **LangChain Integration**
+## 🧩 Key Components
 
-We use **LangChain** to further enhance the capabilities of the Text-to-SQL model by adding an intelligent context layer. LangChain helps in managing dynamic prompts and contextual conversations with the user, which can be used to refine queries or generate additional insights.
-
-This integration allows the model to handle complex queries, perform multi-step reasoning, and even conduct follow-up questions based on prior results. LangChain ensures that the interaction feels natural and the queries remain focused on the desired insights.
-
-#### **File to Run LangChain Integration:**
-- LangChain with Fabrics : `LangChainFabrics.py`
-
----
-
-### **Project Structure**
-
-- **`CreateDataWarehouse`**: Contains the SQL Server scripts for creating tables, views, and stored procedures. Python script to insert 1GB of dummy data into the Microsoft Fabric Lakehouse.
-- **`RAGToSQL`**: Contains files to train and inference RAGToSQL 
-- **`LangchainFabrics`**: Script for running the Text-to-SQL model with Langchain Vector DB.
-- **`requirements.txt`**: Contains a list of required Python packages to run the project.
+| Component | Description |
+|------------|-------------|
+| **Microsoft Fabric Lakehouse** | Centralized cloud data repository for client portfolios, assets, transactions, and risk profiles |
+| **LangChain Agent & Tools** | Modular tools for stock analysis, risk computation, and mitigation planning |
+| **RAG (Text-to-SQL Model)** | Converts natural-language queries into executable SQL for Fabric Lakehouse |
+| **Flask API + HTML UI** | Provides a web chatbot interface for real-time financial query interaction |
+| **ChromaDB Memory** | Stores conversation context and user preferences for personalized responses |
 
 ---
 
-### **Prerequisites**
+## 🧮 Data Description
 
-1. **Python 3.9**
-2. **SQL Server & Microsoft Fabric Lakehouse Access**
-3. **Required Libraries**: Install dependencies via `pip install -r requirements.txt`
+- **Wealth Assets Data:** Client portfolios (Stocks, Bonds, Real Estate, Alternative Investments)  
+- **Financial Records:** Historical transactions and portfolio performance  
+- **Risk Metrics:** Diversification indices, volatility measures, and exposure ratios  
 
-### **Setup Instructions**
+---
 
-1. **Set Up Microsoft Fabric Lakehouse**: Ensure that the lakehouse is set up and ready to accept the schema. 
-2. **Insert Data**: Run the `CreateDataWarehouse` script to populate the tables with dummy data.
-3. **Run Text-to-SQL Model**: Interact with the wealth asset management data using the Text-to-SQL model for dynamic query generation.
-4. **Leverage LangChain**: Use LangChain for more advanced queries and conversational interaction with the data.
+## ⚙️ Tech Stack
 
+- **Language:** Python 3.9 / 3.10  
+- **Libraries:** `pandas`, `numpy`, `flask`, `langchain`, `openai`, `azure`  
+- **Cloud Platform:** Microsoft Fabric (OneLake, Lakehouse, Fabric Data Warehouse)  
+- **Model Framework:** Retrieval-Augmented Generation (RAG) + GPT  
+- **Frontend:** HTML + CSS (chatbot UI)  
 
-# Execution Instructions
+---
 
-## Python version 3.9
+## 🔁 Approach & Workflow
 
-To create a virtual environment and install requirements in Python 3.9 on different operating systems, follow the instructions below:
+### 1️⃣ Define Goal & Task Decomposition
+- Assess financial risk and create mitigation strategies  
+- Tasks → Stock analysis, Risk exposure quantification, Strategy generation, Feedback refinement  
 
-### For Windows:
+### 2️⃣ Build the Agentic AI Framework
+- Chain-of-Thought (CoT) reasoning for dynamic task selection  
+- Intent classification (“Risk Analysis” / “Investment Planning” / Unknown)  
 
-Open the Command Prompt by pressing `Win + R`, typing `cmd`, and pressing `Enter`.
+### 3️⃣ Create Modular Tools
+- **Stock Position Tool:** Portfolio retrieval + volatility analysis  
+- **Risk Calculator:** Diversification & historical risk metrics  
+- **Mitigation Tool:** Portfolio reallocation & hedging strategies  
+- **Feedback Loop:** Learn from user choices for future recommendations  
 
-Change the directory to the desired location for your project:
+### 4️⃣ Memory Management
+- Store conversation embeddings in ChromaDB for context retention  
 
-```sh
-cd C:\path\to\project
+### 5️⃣ Decision Logic
+- Intent → Tool mapping → Execution → Response via LangChain Agent  
+
+### 6️⃣ Flask API + HTML UI
+- `/query` endpoint to accept user inputs, run agent, and return results live  
+
+---
+
+## 🗂️ Project Structure
+
 ```
-
-Create a new virtual environment using the `venv` module:
-
-```sh
-python -m venv myenv
-```
-
-Activate the virtual environment:
-
-```sh
-myenv\Scripts\activate
-```
-
-Install the project requirements using pip:
-
-```sh
-pip install -r requirements.txt
-```
-
-### For Linux/Mac:
-
-Open a terminal.
-
-Change the directory to the desired location for your project:
-
-```sh
-cd /path/to/project
-```
-
-Create a new virtual environment using the `venv` module:
-
-```sh
-python3.9 -m venv myenv
-```
-
-Activate the virtual environment:
-
-```sh
-source myenv/bin/activate
-```
-
-Install the project requirements using pip:
-
-```sh
-pip install -r requirements.txt
-```
-
-These instructions assume you have Python 3.9 installed and added to your system's `PATH` variable.
-
-## Execution Instructions if Multiple Python Versions Installed
-
-If you have multiple Python versions installed on your system, you can use the Python Launcher to create a virtual environment with Python 3.9. Specify the version using the `-p` or `--python` flag. Follow the instructions below:
-
-### For Windows:
-
-Open the Command Prompt by pressing `Win + R`, typing `cmd`, and pressing `Enter`.
-
-Change the directory to the desired location for your project:
-
-```sh
-cd C:\path\to\project
-```
-
-Create a new virtual environment using the Python Launcher:
-
-```sh
-py -3.9 -m venv myenv
-```
-
-> **Note**: Replace `myenv` with your desired virtual environment name.
-
-Activate the virtual environment:
-
-```sh
-myenv\Scripts\activate
-```
-
-Install the project requirements using pip:
-
-```sh
-pip install -r requirements.txt
-```
-
-### For Linux/Mac:
-
-Open a terminal.
-
-Change the directory to the desired location for your project:
-
-```sh
-cd /path/to/project
-```
-
-Create a new virtual environment using the Python Launcher:
-
-```sh
-python3.9 -m venv myenv
-```
-
-> **Note**: Replace `myenv` with your desired virtual environment name.
-
-Activate the virtual environment:
-
-```sh
-source myenv/bin/activate
-```
-
-Install the project requirements using pip:
-
-```sh
-pip install -r requirements.txt
-```
-
-By specifying the version using `py -3.9` or `python3.9`, you can ensure that the virtual environment is created using Python 3.9 specifically, even if you have other Python versions installed.
-
-## Additional Setup Instructions
-
-1. Run `connection.py` to create Azure credentials by authenticating your account. This will print a token in the terminal.
-2. Copy the token and paste it into the `credentials.py` script located in `helper` within the `RAGtoSQL` folder in `financial_goals`.
-3. Ensure all credentials are working correctly.
-4. Run `app.py` in the root folder to start the application. using 
-`python app.py`
-``
 ├─ Agent
 │  ├─ agent.py
 │  ├─ intent.py
@@ -243,15 +119,120 @@ By specifying the version using `py -3.9` or `python3.9`, you can ensure that th
 │     │  ├─ FabricsConnection.py
 │     │  ├─ VannaObject.py
 │     ├─ InferenceRAG.py
-│     ├─ TrainingRAG-Artifact
+│     ├─ TrainRAG.py
+│     ├─ VisualizeRAG.py
+│     ├─ TrainingRAG-Artifact/
 │     │  ├─ Documentation.txt
 │     │  └─ Tables.json
 │     ├─ training_summary.csv
-│     ├─ TrainRAG.py
-│     ├─ VisualizeRAG.py
-├─ readme.md
+├─ templates
+│  └─ index.html
 ├─ requirements.txt
-└─ templates
-   └─ index.html
-
+└─ README.md
 ```
+
+---
+
+## 🧱 Data Insertion Module
+
+Populates the **Microsoft Fabric Lakehouse** with ~1 GB of dummy financial data for analysis.
+
+Run:
+```bash
+python CreateDataWarehouse/InsertToSQL.py
+```
+> Make sure to update your Fabric connection string and install required libs (`pyodbc`, `faker`).
+
+---
+
+## 💬 Text-to-SQL Model (RAG)
+
+Use **RAG To SQL** to convert user queries into SQL statements dynamically.
+
+| Task | Script |
+|------|--------|
+| Train Model | `FinancialGoals/RAGToSQL/TrainRAG.py` |
+| Inference on Queries | `FinancialGoals/RAGToSQL/InferenceRAG.py` |
+| Integration with Fabric | `FinancialGoals/RAGToSQL/FabricsRAG.py` |
+
+---
+
+## 🔗 LangChain Integration
+
+The **LangChain agent** coordinates between tools and memory modules to:
+- Generate context-aware SQL queries  
+- Combine portfolio data with user objectives  
+- Manage multi-step financial reasoning  
+
+Run:
+```bash
+python LangChainFabrics.py
+```
+
+---
+
+## ⚡ Setup & Execution
+
+### Prerequisites
+1. **Python 3.9 or 3.10**  
+2. **Microsoft Fabric Lakehouse Access**  
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+### 🧩 Virtual Environment Setup
+
+#### Windows
+```bash
+cd C:\path\to\project
+python -m venv myenv
+myenv\Scripts\activate
+pip install -r requirements.txt
+```
+
+#### macOS/Linux
+```bash
+cd /path/to/project
+python3.9 -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+### 🧠 Additional Configuration
+1. Run `connection.py` to authenticate with Azure and generate a Fabric token.  
+2. Copy the token → paste into `FinancialGoals/RAGToSQL/Helper/Credentials.py`.  
+3. Run `app.py` to start the Flask server:
+   ```bash
+   python app.py
+   ```
+4. Open your browser at `http://127.0.0.1:5000/`.
+
+---
+
+## 💰 Cost Overview (Approx.)
+
+| Component | Description | Free Tier | Est. Cost After Trial |
+|------------|--------------|-----------|------------------------|
+| **OpenAI GPT-4o API** | RAG Text-to-SQL queries (~100 queries) | — | ~$1.50 |
+| **Azure SQL** | Financial data storage (50 GB) | — | ~$5.00 |
+| **Microsoft Fabric** | Data Lakehouse (100 GB storage + light compute) | 60-day trial | ~$262.80 / mo for F2 SKU |
+| **Network Egress** | 50 GB data transfer | — | ~$4.50 |
+
+> **Total Experiment Cost:** ≈ $11 (using free tiers) → ≈ $280 post-trial
+
+---
+
+## 🏁 Project Takeaways
+- Build autonomous financial agents using LangChain & Agentic AI  
+- Implement RAG Text-to-SQL for natural language querying  
+- Manage contextual memory with ChromaDB vector stores  
+- Integrate Fabric Lakehouse for scalable data storage  
+- Deploy Flask + HTML UI for interactive risk assessment  
+
+---
+
