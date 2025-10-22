@@ -1,5 +1,14 @@
 # 💼 Autonomous Agentic Wealth Management Chatbot
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![OpenAI](https://img.shields.io/badge/OpenAI-API-green)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-orange)
+![Pandas](https://img.shields.io/badge/Data-Pandas-lightblue)
+![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-yellow)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![RAG](https://img.shields.io/badge/Model-RAG--GPT4-purple)
+
+
 An **intelligent Wealth & Risk Assessment System** integrating **Agentic AI**, **LangChain**, and **Microsoft Fabric Lakehouse** to autonomously analyze financial data, generate investment strategies, and provide personalized risk mitigation recommendations.  
 
 This project demonstrates an **end-to-end AI-powered financial platform** capable of dynamic decision-making using modular LangChain tools, Retrieval-Augmented Generation (RAG) models, and contextual memory for long-term portfolio intelligence.
