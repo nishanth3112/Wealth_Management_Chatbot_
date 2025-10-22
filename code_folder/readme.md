@@ -17,7 +17,8 @@ To design an **Agentic AI-driven Wealth Management platform** that autonomously:
 ---
 
 ## 🏗️ Architecture
-<img width="936" height="312" alt="image" src="https://github.com/user-attachments/assets/19a8b385-5994-4e88-80de-a63a88edf768" />
+<img width="1327" height="490" alt="architecture_diagram" src="https://github.com/user-attachments/assets/f21f45c2-7f48-4cda-a727-6694cf1de0a3" />
+
 
 
 
@@ -236,5 +237,6 @@ pip install -r requirements.txt
 - Deploy Flask + HTML UI for interactive risk assessment  
 
 ---
+
 
 
