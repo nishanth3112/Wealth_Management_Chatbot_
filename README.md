@@ -1,12 +1,15 @@
 # 💼 Autonomous Agentic Wealth Management Chatbot
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![OpenAI](https://img.shields.io/badge/OpenAI-API-green)
-![LangChain](https://img.shields.io/badge/LangChain-Framework-orange)
-![Pandas](https://img.shields.io/badge/Data-Pandas-lightblue)
-![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-yellow)
-![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
-![RAG](https://img.shields.io/badge/Model-RAG--GPT4-purple)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-green)
+![LangChain](https://img.shields.io/badge/LangChain-Agentic%20Framework-orange)
+![Microsoft Fabric](https://img.shields.io/badge/Cloud-Microsoft%20Fabric-purple)
+![Azure](https://img.shields.io/badge/Platform-Azure-lightblue)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-yellow)
+![Flask](https://img.shields.io/badge/Backend-Flask-red)
+![HTML UI](https://img.shields.io/badge/Frontend-HTML%20%2B%20CSS-lightgrey)
+![RAG](https://img.shields.io/badge/Model-RAG--Text--to--SQL-brown)
+![License](https://img.shields.io/badge/License-Educational-lightgreen)
 
 
 An **intelligent Wealth & Risk Assessment System** integrating **Agentic AI**, **LangChain**, and **Microsoft Fabric Lakehouse** to autonomously analyze financial data, generate investment strategies, and provide personalized risk mitigation recommendations.  
