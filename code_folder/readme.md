@@ -33,8 +33,6 @@ This section will illustrate:
 
 ## 🧠 Overview
 
-This project forms **Phase 2** of the *Microsoft Fabric Financial Reporting Agent* initiative — extending from static reporting to intelligent financial reasoning using **Agentic AI**.
-
 Agentic AI enables the system to:
 - Break complex financial questions into modular sub-tasks  
 - Dynamically invoke specialized LangChain tools (e.g., risk analysis, strategy generation)  
@@ -237,6 +235,7 @@ pip install -r requirements.txt
 - Deploy Flask + HTML UI for interactive risk assessment  
 
 ---
+
 
 
 
