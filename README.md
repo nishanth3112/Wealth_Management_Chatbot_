@@ -9,7 +9,6 @@
 ![Flask](https://img.shields.io/badge/Backend-Flask-red)
 ![HTML UI](https://img.shields.io/badge/Frontend-HTML%20%2B%20CSS-lightgrey)
 ![RAG](https://img.shields.io/badge/Model-RAG--Text--to--SQL-brown)
-![License](https://img.shields.io/badge/License-Educational-lightgreen)
 
 
 An **intelligent Wealth & Risk Assessment System** integrating **Agentic AI**, **LangChain**, and **Microsoft Fabric Lakehouse** to autonomously analyze financial data, generate investment strategies, and provide personalized risk mitigation recommendations.  
