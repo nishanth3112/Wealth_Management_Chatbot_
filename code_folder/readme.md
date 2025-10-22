@@ -17,8 +17,9 @@ To design an **Agentic AI-driven Wealth Management platform** that autonomously:
 ---
 
 ## 🏗️ Architecture
+<img width="936" height="312" alt="image" src="https://github.com/user-attachments/assets/19a8b385-5994-4e88-80de-a63a88edf768" />
 
-> *(🔧 Drag and drop your architecture diagram here)*  
+
 
 This section will illustrate:
 - Data ingestion into Microsoft Fabric Lakehouse  
@@ -235,4 +236,5 @@ pip install -r requirements.txt
 - Deploy Flask + HTML UI for interactive risk assessment  
 
 ---
+
 
