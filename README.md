@@ -144,30 +144,6 @@ Agentic AI enables the system to:
 
 ---
 
-## 🧱 Data Insertion Module
-
-Populates the **Microsoft Fabric Lakehouse** with ~1 GB of dummy financial data for analysis.
-
-Run:
-```bash
-python CreateDataWarehouse/InsertToSQL.py
-```
-> Make sure to update your Fabric connection string and install required libs (`pyodbc`, `faker`).
-
----
-
-## 💬 Text-to-SQL Model (RAG)
-
-Use **RAG To SQL** to convert user queries into SQL statements dynamically.
-
-| Task | Script |
-|------|--------|
-| Train Model | `FinancialGoals/RAGToSQL/TrainRAG.py` |
-| Inference on Queries | `FinancialGoals/RAGToSQL/InferenceRAG.py` |
-| Integration with Fabric | `FinancialGoals/RAGToSQL/FabricsRAG.py` |
-
----
-
 ## 🔗 LangChain Integration
 
 The **LangChain agent** coordinates between tools and memory modules to:
